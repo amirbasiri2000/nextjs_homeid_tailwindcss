@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="flex min-h-screen justify-center mt-16  relative ">
+    <div className="flex justify-center mt-16  relative ">
       {/* left banner */}
       <div
         className="absolute hidden lg:block z-50 -top-1 lg:-left-24 md:-left-32 w-[29rem] 
@@ -35,12 +35,12 @@ const HeroSection = () => {
       {/* main */}
       <div className="w-11/12 md:3/4 lg:w-1/2 flex flex-col justify-start items-center">
         <div className="">
-          <h1 className="text-[3.1rem] text-[#333333f3] text-center py-8 px-4">
+          <h1 className="text-[2em] lg:text-[3.1rem] text-[#333333f3] text-center py-8 px-4">
             Powerfull Solution <br /> for Real Estate Company
           </h1>
         </div>
         <div className="px-4">
-          <h5 className="text-2xl text-[#333] text-center">
+          <h5 className="text-xl lg:text-2xl text-[#333] text-center">
             HomeID - Your Ultimate Real Estate WordPress Theme{" "}
             <span className="text-lg text-gray-600">
               that lets you run a realtor company, a real estate agency, a

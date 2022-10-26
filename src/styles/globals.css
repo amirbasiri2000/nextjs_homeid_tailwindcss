@@ -20,21 +20,6 @@ a {
   box-sizing: border-box;
 }
 
-@layer components {
-  .nav_itme {
-    @apply inline-block relative after:content-none after:absolute after:w-full after:scale-0 after:h-2 after:bottom-0 after:left-0 after:bg-[#0ec6d5] after:origin-bottom-right after:transition-transform after:ease-out after:delay-300 hover:after:scale-x-[1] hover:after:origin-bottom-left;
-  }
-
-  .btn_green {
-    @apply bg-[#0ec6d5] shadow-sm shadow-[#0ec6d5]
-              text-white px-6 py-4 rounded-md hover:cursor-pointer transition-colors hover:bg-[#0495a2];
-  }
-  .btn_white {
-    @apply bg-white shadow-sm border-2 text-gray-700
-              px-6 py-4 rounded-md hover:cursor-pointer transition-colors;
-  }
-}
-
 .nav_itme {
   display: inline-block;
   position: relative;
@@ -58,4 +43,31 @@ a {
 .nav_itme:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.hover-shine::before {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+
+@layer components {
+  .btn_green {
+    @apply bg-[#0ec6d5] shadow-sm shadow-[#0ec6d5] text-white px-6 py-4 rounded-md hover:cursor-pointer transition-colors hover:bg-[#0495a2];
+  }
+  .btn_white {
+    @apply bg-white shadow-sm border-2 text-gray-700 px-6 py-4 rounded-md hover:cursor-pointer transition-colors;
+  }
 }
