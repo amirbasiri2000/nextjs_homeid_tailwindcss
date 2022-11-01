@@ -8,7 +8,7 @@ const TitleBig = ({
 }) => {
   console.log({ color_text });
   return (
-    <div className="w-full flex justify-center items-center mb-10">
+    <div className="pt-16 w-full flex justify-center items-center mb-10 ">
       <div className="w-80 h-60 relative flex flex-col justify-center items-center ">
         <p className="text-[#0ec6d5] font-bold pb-8 text-xl z-10">{header}</p>
         <h2 className={`${color_text} text-center text-[2.4rem] z-10`}>
